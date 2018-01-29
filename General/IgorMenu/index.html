@@ -3,17 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Igor Menu</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
 
   </head>
   <body>
     <header>
       <div class="header">
+        <div onclick="myFunction()" class="mobile_button">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
         <div class="logo">
           <a href="#">logo</a>
         </div>
-        <div class="nav_menu">
+        <div id="nav_menu">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -21,8 +26,9 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
+
       </div>
     </header>
   </body>
-  <script src="assets/css/js.js" charset="utf-8"></script>
+  <script src="assets/js/js.js" charset="utf-8"></script>
 </html>
