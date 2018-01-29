@@ -1,0 +1,139 @@
+body{
+    background-color: #224066;
+}
+#hero{
+    width: 250px;
+    height: 358px;
+    position: relative;
+    left: 200px;
+    top:200px;
+}
+@keyframes hero-stands{
+    from{
+        top:0;
+    }
+    to{
+        top: -10px;
+    }
+}
+#hero .stands{
+    background-image: url(file:///C:/Users/dan.creanga/Documents/frontend-playground/Dan/img/stands.png);
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 2;
+    animation-name: hero-stands;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#hero .attack{
+    background-image: url(file:///C:/Users/dan.creanga/Documents/frontend-playground/Dan/img/atack.png);
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 2;
+}
+#hero.idle .stands{
+    visibility: visible;
+}
+#hero.attack .attack{
+    visibility: visible;
+    top: -30px;
+}
+
+@keyframes shadow{
+    from{
+        width: 250px;
+    }
+    to{
+        width: 225px;
+        left: 12.5px;
+    }
+}
+#hero .shadow{
+    background-image: url(file:///C:/Users/dan.creanga/Documents/frontend-playground/Dan/img/shadow.png);
+    width: 250px;
+    height: 84px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position : absolute;
+    left: 0;
+    bottom: -50px;
+    z-index: 1;
+    animation-name: shadow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes text{
+    from{
+        font-size: 55px;
+        font-style: normal;
+        color:white;
+        left:130%
+    }
+    to{
+        font-size: 65px;
+        font-style: oblique;
+        color:red;
+        left:150%;
+    }
+}
+#hero .text {
+    font-size: 55px;
+    font-weight: thin;
+    color: white;
+    width: 500px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 130%;
+    top: -10px;
+    animation-name: text;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+}
+@keyframes laser{
+    from{
+        width: 175px;
+    }
+    to{
+        width: 525px;
+    }
+}
+#hero .laser{
+    width: 175px;
+    height: 60px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    left: 145px;
+    top: 20px;
+    background-image: url(file:///C:/Users/dan.creanga/Documents/frontend-playground/Dan/img/beam.png);
+    animation-name: laser;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+}
+
+#hero .laser::after{
+    content: " ";
+    width: 4px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: #ffe500;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 3px #ffe500;
+}
