@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="MenuStyle.css">
-    <script src="Menu.js"></script>
     <title></title>
 </head>
 <body>
-  <ul>
+  <ul id="list">
     <li class="dropdown">
       <a href="javascript:void(0)" class="dropbtn">Lista Meniuri</a>
       <div class="dropdown-content">
+        <input id="add" type="text" onchange="addItem()" placeholder="Add new Item" />
         <a href="DanMenu/Start.html">Dan</a>
         <a href="#">Ioan</a>
         <a href="#">Igor</a>
       </div>
     </li>
   </ul>
+
+  <script src="Menu.js"></script>
 </body>
 </html>
