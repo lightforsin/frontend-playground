@@ -1,8 +1,8 @@
-function myFunction() {
-    var x = document.getElementById("navbar");
-    if (x.className === "topnavbar") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnavbar";
-    }
+function addItem() {
+      var node = document.createElement("a");
+      var x = document.getElementById("add").value;
+      var text = document.createTextNode(x);
+      node.appendChild(text);
+      document.getElementsByClassName("dropdown-content")[0].appendChild(node);
+      document.getElementById("add").value="";
 }
