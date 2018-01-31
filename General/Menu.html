@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="MenuStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title></title>
 </head>
 <body>
@@ -20,6 +21,37 @@
     </li>
   </ul>
 
+
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDA-HukN97JRU7wPzZO-67EbPK4ByPUnuc",
+      authDomain: "ntt-data-fc62d.firebaseapp.com",
+      databaseURL: "https://ntt-data-fc62d.firebaseio.com",
+      projectId: "ntt-data-fc62d",
+      storageBucket: "ntt-data-fc62d.appspot.com",
+      messagingSenderId: "249370439758"
+    };
+    firebase.initializeApp(config);
+
+    var rootRef = firebase.database().ref().child('infos');
+    $('#add').change(function(){
+      rootRef.set({
+        add:$('#add').val()
+      });
+      $('#add').val('');
+    })
+
+    $(window).on('load',function(){
+      rootRef.on('value', function(snapshot){
+        $('dropdow-content a').append(text(snapshot.child('add').val()));
+      })
+    });
+
+
+
+  </script>
   <script src="Menu.js"></script>
 </body>
 </html>

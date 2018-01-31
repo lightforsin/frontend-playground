@@ -6,6 +6,4 @@ function addItem() {
       node.setAttribute('href', "#");
       node.appendChild(text);
       document.getElementsByClassName("dropdown-content")[0].appendChild(node);
-      document.getElementById("add").value="";
-      localStorage.setItem("text", someVarName);
 }
