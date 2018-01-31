@@ -37,15 +37,21 @@
 
     var rootRef = firebase.database().ref().child('infos');
     $('#add').change(function(){
-      rootRef.set({
-        add:$('#add').val()
-      });
+      for(i=0;i<$('infos').length;i++){
+        rootRef.set({
+          i:$('#add').val()
+        });
+      }
       $('#add').val('');
     })
 
     $(window).on('load',function(){
       rootRef.on('value', function(snapshot){
-        $('dropdow-content a').append(text(snapshot.child('add').val()));
+        for(i=0; i< $('infos').length; i++){
+          $('.dropdown-content').append('<a id="i" href="#"></a>');
+          $('#i').text(snapshot.child($('infos')[i]).val());
+        }
+
       })
     });
 
