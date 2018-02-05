@@ -26,11 +26,18 @@
       "url": "contacts.html"
     }
   ],
-  "comments": [
+  "subposts": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Price1"
+    },
+    {
+      "id": 2,
+      "name": "Price2"
+    },
+    {
+      "id": 3,
+      "name": "Price3"
     }
   ],
   "profile": {
