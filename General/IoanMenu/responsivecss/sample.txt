@@ -1,0 +1,11 @@
+I m a sample text file
+ function getText(){
+          fetch('db.json')
+          .then(function(res){
+            return res.json();
+            
+          })
+          .then(function(res) {
+            console.log(res);
+
+          })

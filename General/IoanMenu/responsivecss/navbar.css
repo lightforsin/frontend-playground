@@ -9,7 +9,7 @@
     background-color: #ccc;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size:cover ;
   }
   
   .nav {
@@ -38,13 +38,19 @@
     display: inline;
     float: right;
     font-size: 18px;
+    position: relative;
+    display: inline-block;
+    margin-top:2px;
+    
+
   }
   
   .nav > .nav-links > a {
     display: inline-block;
-    padding: 13px 10px 13px 10px;
+    padding: 13px 15px 13px 15px;
     text-decoration: none;
     color: #efefef;
+    margin-top:2px;
   }
   
   .nav > .nav-links > a:hover {
@@ -53,9 +59,17 @@
   
   .nav > #nav-check {
     display: none;
-  }
+  }  
+
+  
   
   @media (max-width:768px) {
+
+    #subMenu{
+
+      left: 0;
+  }
+
     .nav > .nav-btn {
       display: inline-block;
       position: absolute;
@@ -100,4 +114,5 @@
       overflow-y: auto;
     }
   }
+
 

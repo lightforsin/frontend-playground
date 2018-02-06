@@ -1,0 +1,53 @@
+{
+  "JohnnyMenu": [
+    {
+      "id": 0,
+      "name": "Github",
+      "url": "https://github.com/lightforsin/frontend-playground"      
+    },
+    {
+      "id": 1,
+      "name": "Stackoverflow",
+      "url": "https://github.com/lightforsin/frontend-playground"
+    },
+    {
+      "id": 2,
+      "name": "Facebook",
+      "url": "https://facebook.com"
+    },
+    {
+      "id": 3,
+      "name": "Twitter",
+      "url": "#"
+    },
+    {
+      "id": 4,
+      "divID": "goagle",
+      "name": "Google",
+      "url": "https://google.com",
+      "children": [
+        {
+          "id":40,
+          "name": "About You",
+          "url": "https://github.com/lightforsin/frontend-playground"      
+        },
+        {
+          "id": 41,
+          "name": "About Me",
+          "url": "https://github.com/lightforsin/frontend-playground"
+        },
+        {
+          "id": 42,
+          "name": "About us",
+          "url": "https://facebook.com"
+        },
+        {
+          "id": 43,
+          "name": "About",
+          "url": "#"
+        }
+
+      ]
+    }
+  ]
+}
