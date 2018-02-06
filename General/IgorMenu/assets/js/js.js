@@ -25,7 +25,7 @@ $(document).ready(function() {
       cache : false,
       success : function(result) {
         for (var i = 0; i < result.length; i++) {
-          $('.sub-menu').append('<li class="item1"><a>'+ result[i].title +'</a></li>')
+          $('.item:nth-child(2) .sub-menu').append('<li class="item1"><a>'+ result[i].title +'</a></li>')
           $('#nav_menu .sub-menu').children('li:nth-child('+(i+1)+')').children('a').attr("href", result[i].link);
           }
         }
