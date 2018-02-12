@@ -23,4 +23,25 @@ $(document).ready(function() {
           }
         }
     });
+
+});
+
+$('#sign-up').on('click', function() {
+  var test = "Username= " + $('#username').val( ) + "&Email= " + $('#email').val() + "&Password= " + $('#password').val();
+
+  $.ajax({
+    url: 'http://localhost:3000/user-data',
+    dataType: 'json',
+    type: 'post',
+    data: test
+  });
+  window.location.replace("login.html");
+});
+
+$('#login').on('click', function() {
+  $.ajax({
+    url: 'http://localhost:3000/user-data',
+    type: 'GET',
+    dataType: 'json'
+  })
 });
