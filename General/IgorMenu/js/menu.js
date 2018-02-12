@@ -1,11 +1,4 @@
-function myFunction() {
-  var x = document.getElementById('nav_menu');
-  if (x.style.display === 'block') {
-    x.style.display = 'none';
-  } else {
-    x.style.display = 'block';
-  }
-}
+//NAV MENU
 $(document).ready(function() {
     $.ajax({
       url: 'http://localhost:3000/menu',
