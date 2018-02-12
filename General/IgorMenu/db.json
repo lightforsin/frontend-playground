@@ -1,0 +1,46 @@
+{
+  "menu": [
+    {
+      "title": "Home",
+      "link": "test"
+    },
+    {
+      "title": "About",
+      "link": "#"
+    },
+    {
+      "title": "Blog",
+      "link": "#"
+    },
+    {
+      "title": "Contact",
+      "link": "asdsad"
+    },
+    {
+      "title": "Log in",
+      "link": "login.html"
+    },
+    {
+      "title": "Sign up",
+      "link": "signup.html"
+    }
+  ],
+  "sub-menu": [
+    {
+      "title": "Home1",
+      "link": "test"
+    },
+    {
+      "title": "About1",
+      "link": "#"
+    },
+    {
+      "title": "Blog1",
+      "link": "#"
+    },
+    {
+      "title": "Contact1",
+      "link": "asdsad"
+    }
+  ]
+}
