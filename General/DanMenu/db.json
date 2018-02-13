@@ -24,6 +24,16 @@
       "id": 5,
       "name": "Contacts",
       "url": "contacts.html"
+    },
+    {
+      "id": 6,
+      "name": "Sign Up",
+      "url": "signup.html"
+    },
+    {
+      "id": 7,
+      "name": "Log In",
+      "url": "login.html"
     }
   ],
   "subposts": [
@@ -40,7 +50,36 @@
       "name": "Price3"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "users": [
+    {
+      "Login": "Danu",
+      "email": "dancreanga0@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "Login": "Igorash",
+      "email": "igorash@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "Login": "James",
+      "email": "james@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "Login": "Johi",
+      "email": "123@gmail.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "Login": "123",
+      "email": "1234@gmail.com",
+      "password": "123",
+      "id": 5
+    }
+  ]
 }
