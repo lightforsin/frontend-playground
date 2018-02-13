@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Home",
+      "url": "Start.html"
+    },
+    {
+      "id": 2,
+      "name": "News",
+      "url": "news.html"
+    },
+    {
+      "id": 3,
+      "name": "Prices",
+      "url": "prices.html"
+    },
+    {
+      "id": 4,
+      "name": "About Us",
+      "url": "about.html"
+    },
+    {
+      "id": 5,
+      "name": "Contacts",
+      "url": "contacts.html"
+    },
+    {
+      "id": 6,
+      "name": "Sign Up",
+      "url": "signup.html"
+    },
+    {
+      "id": 7,
+      "name": "Log In",
+      "url": "login.html"
+    }
+  ],
+  "subposts": [
+    {
+      "id": 1,
+      "name": "Price1"
+    },
+    {
+      "id": 2,
+      "name": "Price2"
+    },
+    {
+      "id": 3,
+      "name": "Price3"
+    }
+  ],
+  "users": [
+    {
+      "Login": "Danu",
+      "email": "dancreanga0@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "Login": "Igorash",
+      "email": "igorash@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "Login": "James",
+      "email": "james@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "Login": "Johi",
+      "email": "123@gmail.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "Login": "123",
+      "email": "1234@gmail.com",
+      "password": "123",
+      "id": 5
+    }
+  ]
+}

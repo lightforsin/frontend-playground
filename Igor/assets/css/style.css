@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+/* font-family: 'Roboto', sans-serif; */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  /* background-color: red; */
+}
+
+body a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 0px 30px;
+  height: 80px;
+  line-height: 80px;
+  background-color: #111;
+}
+
+.logo {
+  float: left;
+}
+
+.logo a {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+}
+
+#nav_menu {
+  float: right;
+}
+
+#nav_menu .menu {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+#nav_menu .menu li {
+  display: inline-block;
+}
+
+#nav_menu .menu li a {
+  padding: 30px 30px;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#nav_menu .menu li a:hover {
+  color: red;
+}
+
+.mobile_button {
+  float: right;
+  margin-top: 30px;
+  cursor: pointer;
+  display: none;
+  padding-right: 20px;
+}
+
+.line {
+  width: 30px;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 7px;
+}
+
+.sub-menu {
+  position: absolute;
+  background: #111;
+  margin: 0;
+  padding: 0 0px;
+  margin-left: -50px;
+  border-top: 1px solid #fff;
+}
+#nav_menu .menu .sub-menu li a {
+  padding: 30px 80px;
+}
+#nav_menu .menu .sub-menu li {
+  display: block;
+  text-align: center;
+}
+#nav_menu .menu .sub-menu li:hover {
+  background-color: #111;
+}
+
+.sub-menu {
+  display: none;
+}
+
+#nav_menu .menu li:hover .sub-menu {
+  display: block;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  #nav_menu {
+    text-align: center;
+    display: none;
+    background-color: #111;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+  }
+  #nav_menu .menu li {
+    display: block;
+  }
+  #nav_menu .menu li a {
+    color: #fff;
+    padding: 0;
+    display: block;
+  }
+  .logo, #nav_menu {
+    float: none;
+  }
+  .logo {
+    padding-left: 20px;
+  }
+  .mobile_button {
+    display: block;
+  }
+  .header {
+    padding: 0px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  body {
+    max-width: 400px;
+  }
+}

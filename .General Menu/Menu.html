@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="MenuStyle.css">
+    <title></title>
+</head>
+<body>
+  <ul id="list">
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Lista Meniuri</a>
+      <div class="dropdown-content">
+        <input id="add" type="text" onchange="addItem()" placeholder="Add new Item" />
+        <a href="DanMenu/Start.html">Dan</a>
+        <a href="IoanMenu/responsivecss/navbar.html">Ioan</a>
+        <a href="IgorMenu/index.html">Igor</a>
+      </div>
+    </li>
+  </ul>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDA-HukN97JRU7wPzZO-67EbPK4ByPUnuc",
+      authDomain: "ntt-data-fc62d.firebaseapp.com",
+      databaseURL: "https://ntt-data-fc62d.firebaseio.com",
+      projectId: "ntt-data-fc62d",
+      storageBucket: "ntt-data-fc62d.appspot.com",
+      messagingSenderId: "249370439758"
+    };
+    firebase.initializeApp(config);
+
+    var rootRef = firebase.database().ref().child('infos');
+      $('#add').change(function(){
+        for(var i=0;i<=$('infos').length; i++){
+          rootRef.set({
+            [i]:$('#add').val()
+          });
+        }
+        $('#add').val('');
+      })
+
+
+    $(window).on('load',function(){
+      rootRef.on('value', function(snapshot){
+        for(var i=0; i<=$('infos').length; i++){
+          $('.dropdown-content').append('<a id="i" href="#"></a>');
+          $('#i').text(snapshot.child([i]).val());
+        }
+      })
+    });
+  </script>
+  <script src="Menu.js"></script>
+</body>
+</html>
