@@ -27,21 +27,80 @@ $(document).ready(function() {
 });
 
 $('#sign-up').on('click', function() {
-  var test = "Username= " + $('#username').val( ) + "&Email= " + $('#email').val() + "&Password= " + $('#password').val();
+
+    //Username validation
+    if ($('#username').val().length < 3 || $('#username').val().length > 15) {
+      $('#username').css('border', '1px solid red');
+      return;
+    } else {
+      $('#username').css('border', '1px solid transparent');
+    }
+
+    //Email validation
+    if (!isValidEmail($('#email').val())) {
+      $('#email').css('border', '1px solid red');
+      return;
+    }else {
+      $('#email').css('border', '1px solid transparent');
+    }
+
+    //Password validation
+    if ($('#password').val().length < 4 ) {
+      $('#password').css('border', '1px solid red');
+      $('#password1').css('border', '1px solid red');
+      return;
+    }
+    else if(!isValidPassword($('#password').val(),$('#password1').val())){
+      $('#password').css('border', '1px solid red');
+      $('#password1').css('border', '1px solid red');
+      return;
+    }else {
+      $('#password').css('border', '1px solid transparent');
+      $('#password1').css('border', '1px solid transparent');
+    }
+
+  var test = "Username=" + $('#username').val() + "&Email=" + $('#email').val() + "&Password=" + $('#password').val();
 
   $.ajax({
     url: 'http://localhost:3000/user-data',
     dataType: 'json',
     type: 'post',
-    data: test
+    data: test,
+    success: function() {
+      // alert("Felicitari " + $('#username').val() + " esti inregistrat!");
+    }
   });
-  window.location.replace("login.html");
+
 });
 
 $('#login').on('click', function() {
   $.ajax({
-    url: 'http://localhost:3000/user-data',
+    url: 'http://localhost:3000/user-data?Username=' + $('#username').val(),
     type: 'GET',
-    dataType: 'json'
+    success: function(data) {
+      if( data.length != 0) {
+        $(".test123").append("<p>Felicitari " + $('#username').val() + " esti logat!</p>");
+        $(".login-form").css('display', 'none');
+      } else {
+        alert("Nu exista asa User, mai incearca!");
+      }
+    }
   })
 });
+
+
+// EMAIL validation
+function isValidEmail(email){
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  var isValidEmail = re.test(String(email).toLowerCase());
+  return isValidEmail
+}
+
+//Password validation
+function isValidPassword(password,password1){
+  if(password != password1){
+    return false
+  }else{
+    return true
+  }
+}

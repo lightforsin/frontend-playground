@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>Johnny</title>
+<link rel="stylesheet" href="./css/navbar.css">
+<link rel="stylesheet" href="./css/index.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<body>
+    <div w3-include-html="navbar.html"></div>
+    <div id="contact">Sign Up here</div>
+    <div id="login">Login</div>
+
+    <form id="contactForm">
+        <h1>Sign Up here</h1>
+        <small>You've got the chance to win something amazing</small>        
+            <input id="name" placeholder="Name" type="text" required />
+            <input id="email" placeholder="Email" type="email" required />
+            <input id="password" placeholder="Password" type="password" required />
+            <button id="register" class="formBtn" type="button" onclick="Register()">Register</button>            
+    </form>
+
+    <form id="loginForm">
+            <h1>Login here</h1>
+            <input id="useremail" placeholder="Email" type="email" required />
+            <input id="userpassword" placeholder="Password" type="password" required />
+            <button class="formBtn" type="reset" onclick="Login()">Login</button>
+    </form>
+
+    <script>    
+        w3.includeHTML();
+    </script>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/fadeToggle.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "Github",
-      "url": "https://github.com/lightforsin/frontend-playground"      
+      "url": "https://github.com/lightforsin/frontend-playground"
     },
     {
       "id": 1,
@@ -27,9 +27,9 @@
       "url": "https://google.com",
       "children": [
         {
-          "id":40,
+          "id": 40,
           "name": "About You",
-          "url": "https://github.com/lightforsin/frontend-playground"      
+          "url": "https://github.com/lightforsin/frontend-playground"
         },
         {
           "id": 41,
@@ -46,8 +46,15 @@
           "name": "About",
           "url": "#"
         }
-
       ]
+    }
+  ],
+  "Users": [
+    {
+      "name": "John",
+      "email": "ioan.agrigoroaei@yahoo.com",
+      "password": "astro",
+      "id": 1
     }
   ]
 }
