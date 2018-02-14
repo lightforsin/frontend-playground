@@ -1,8 +1,7 @@
 window.onload = function getMenu() {
     fetch('http://localhost:3000/JohnnyMenu')
         .then((res) => res.json())
-        .then((data) => {           
-            console.log(data)
+        .then((data) => {
             let output = '';
             for (let i = 0; i < data.length; i++) {
 
@@ -14,7 +13,7 @@ window.onload = function getMenu() {
 
                 if (data[i].children && data[i].children.length > 0) {
 
-                    console.log(data[i].children)
+                    
                     var subMenu = '<ul id="subMenu">';
 
                     for (let y = 0; y < data[i].children.length; y++) {
@@ -26,7 +25,7 @@ window.onload = function getMenu() {
                     }
                     subMenu += '</ul>';
 
-                    console.log(data[i].id);                   
+                                       
                                                      
                 } 
 

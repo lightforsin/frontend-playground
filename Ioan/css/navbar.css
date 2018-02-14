@@ -25,7 +25,7 @@
   
   .nav > .nav-header > .nav-title {
     display: inline-block;
-    font-size: 22px;
+    font-size: 20px;
     color: #fff;
     padding: 10px 10px 10px 10px;
   }
@@ -37,7 +37,7 @@
   .nav > .nav-links {
     display: inline;
     float: right;
-    font-size: 18px;
+    font-size: 16px;
     position: relative;
     display: inline-block;
     margin-top:2px;
@@ -63,11 +63,13 @@
 
   
   
-  @media (max-width:768px) {
+  @media (max-width:800px) {
+    
 
     #subMenu{
 
       left: 0;
+      
   }
 
     .nav > .nav-btn {
