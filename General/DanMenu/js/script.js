@@ -29,30 +29,52 @@
 
 // })(jQuery);
 $('#submit').on("click", function (){
-  var ok = true;
-  //Fields validation not empty
-  if($("#login").val()=='' || $("#email").val()=='' || $("#password").val()=='' || $("#password2").val()==''){
-    alert("Please fill in all required fields and try again!");
-    ok=false;
-  }
-  //Password match validation
-  var pass1 = $("#password").val();
-  var pass2 = $("#password2").val();
-  if (pass1 != pass2) {
-      alert("Passwords Do not match, please try again!");
-      $("#password").css('border', '1px solid red');
-      $("#password2").css('border', '1px solid red');
-      ok = false;
-  }
-  //Email form validation
+    //Email form validation
   function ValidateEmail(email) {
         var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
         return expr.test(email);
     };
-  if (!ValidateEmail($("#email").val())) {
-         alert("Invalid email address.");
+  var ok = true;
+  //Fields validation not empty
+  if($("#login").val()==''){
+    $("#login").css('border', '2px solid red');
+    ok=false;
+    $("#message").text('Please introduce your login');
+  }else{
+    $("#login").css('border', '1px solid #ccc');
+    if($("#email").val()==''){
+      $("#email").css('border', '2px solid red');
+      $("#message").text('Please introduce your email');
+      ok=false;
+    }else{
+      if (!ValidateEmail($("#email").val())) {
+         $("#message").text('Invalid email');
          ok=false
-     }
+      }else{
+        $("#email").css('border', '1px solid #ccc');
+        if($("#password").val()==''){
+          $("#password").css('border', '2px solid red');
+          $("#message").text('Please introduce your password');
+          ok=false;
+      }else{
+        $("#password").css('border', '1px solid #ccc');
+        if($("#password2").val()==''){
+          $("#password2").css('border', '2px solid red');
+          $("#message").text('Please confirm your password');
+          ok=false;
+        }else{
+          $("#password2").css('border', '1px solid #ccc');
+          if ($("#password").val()!= $("#password2").val()) {
+              $("#message").text('Passwords do not match');
+              $("#password").css('border', '2px solid red');
+              $("#password2").css('border', '2px solid red');
+              ok = false;
+          }
+        }
+      }
+    }
+  }
+}
   var link = 'http://localhost:3000/users?email='+$("#email").val();
   $.ajax({
     url: link,
@@ -75,11 +97,14 @@ $('#submit').on("click", function (){
           $("#login").val(''); $("#email").val(''); $("#password").val(''); $("#password2").val('');
           $("#password").css('border', '1px solid #ccc');
           $("#password2").css('border', '1px solid #ccc');
+          $("#message").remove();
         }
       }
     }
   });
 });
+
+
 $('#login_btn').on("click", function (){
   let link='http://localhost:3000/users?username='+$("#login").val()+'&password='+$("#password").val();
   $.ajax({

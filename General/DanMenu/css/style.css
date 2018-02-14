@@ -1,6 +1,8 @@
 #message{
   font-size: 35px;
   font-style: italic;
+  color: red;
+  text-shadow: 1px 1px gray;
 }
 #logout{
   width: 20%;
