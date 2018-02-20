@@ -75,7 +75,7 @@ $('#sign-up').on('click', function() {
 
 $('#login').on('click', function() {
   $.ajax({
-    url: 'http://localhost:3000/user-data?Username=' + $('#username').val(),
+    url: 'http://localhost:3000/user-data?Username=' + $('#username').val() + '&Password=' + $('#password').val() ,
     type: 'GET',
     success: function(data) {
       if( data.length != 0) {
