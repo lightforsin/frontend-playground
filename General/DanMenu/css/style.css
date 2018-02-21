@@ -1,5 +1,5 @@
 #message{
-  font-size: 35px;
+  font-size: 23px;
   font-style: italic;
   color: red;
   text-shadow: 1px 1px gray;
@@ -20,12 +20,32 @@
     background-color: #1b62d6;
 }
 
-.form{
+.triangle-signup{
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin-left: 96%;
+  border-bottom: 5px solid #f2f2f2;
+}
+.triangle-login{
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin-left: 91%;
+  border-bottom: 5px solid #f2f2f2;
+}
+
+.login-form, .signup-form{
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
     width: 40%;
     margin: 100px auto;
+    width: 18%;
+    margin: 0px;
+    float: right;
 }
 input{
     width: 100%;
@@ -47,7 +67,7 @@ input[type=button], [type=submit] {
     cursor: pointer;
 }
 
-input[type=button]:hover, [type=button]:hover {
+input[type=button]:hover, [type=submit]:hover {
     background-color: #1b62d6;
 }
 .button{
@@ -78,7 +98,7 @@ input[type=button]:hover, [type=button]:hover {
     display: inline-block;
     width: 100%;
 }
-.topnavbar a:nth-child(7), .topnavbar a:nth-child(8){
+#menu-login, #menu-signup{
   float: right;
 }
 .topnavbar a{
