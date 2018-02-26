@@ -6,12 +6,20 @@
       cache: false,
       success: function(data){
         for( var i=1; i<=data.length; i++){
-          $('.topnavbar').append('<a>Text</a>');
-          $('.topnavbar a:nth-child('+(i+3)+')').text(data[i-1].name);
-          $('.topnavbar a:nth-child('+(i+3)+')').attr("href", data[i-1].url);
+          if($.cookie("login")!=null){
+            $('.topnavbar').append('<a>Text</a>');
+            $('.topnavbar a:nth-child('+(i+5)+')').text(data[i-1].name);
+            $('.topnavbar a:nth-child('+(i+5)+')').attr("href", data[i-1].url);
+            $('.topnavbar a:nth-child(8)').addClass('dropdown');
+            $('.topnavbar a:nth-child(8)').append('<div class="dropdown-content"></div>');
+          }else{
+            $('.topnavbar').append('<a>Text</a>');
+            $('.topnavbar a:nth-child('+(i+3)+')').text(data[i-1].name);
+            $('.topnavbar a:nth-child('+(i+3)+')').attr("href", data[i-1].url);
+            $('.topnavbar a:nth-child(6)').addClass('dropdown');
+            $('.topnavbar a:nth-child(6)').append('<div class="dropdown-content"></div>');
+          }
         }
-        $('.topnavbar a:nth-child(6)').addClass('dropdown');
-        $('.topnavbar a:nth-child(6)').append('<div class="dropdown-content"></div>');
       }
     });
   $.ajax({
@@ -25,6 +33,17 @@
       }
     }
   });
+  if($.cookie("login")!=null){
+    $('#menu-signup').hide();
+    $('#menu-login').hide();
+    $('.topnavbar').append('<button id="logout">Log Out</button>');
+    $('.topnavbar').append('<p id="logout-text">'+$.cookie("login")+' , felicitari esti logat!</p>');
+    $(".login-form").hide();
+    $("#logout").on("click", function (){
+      $.removeCookie("login");
+      location.reload();
+    });
+  }
 });
 
 // })(jQuery);

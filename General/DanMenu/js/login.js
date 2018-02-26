@@ -22,13 +22,25 @@ $('#login_btn').on("click", function (){
       if(users.length==0){
         alert('User or password is incorrect!');
       }else{
-        $('body').append("<p id='message'>User "+$("#login").val()+" is logged!</p>");
-        $('body p').append('<input id="logout" type="button" value="Log Out"></input>');
-        $('.form').hide();
-        $('#login_btn').hide();
-        $('#logout').on("click", function (){
-          window.location.replace("Start.html");
-        });
+        // $('body').append("<p id='message'>User "+$("#login").val()+" is logged!</p>");
+        // $('body p').append('<input id="logout" type="button" value="Log Out"></input>');
+        // $('.form').hide();
+        // $('#login_btn').hide();
+        // $('#logout').on("click", function (){
+        //   window.location.replace("Start.html");
+        // });
+        $.cookie("login", $('#login').val());
+        if($.cookie("login")!=null){
+          $('#menu-signup').hide();
+          $('#menu-login').hide();
+          $('.topnavbar').append('<button id="logout">Log Out</button>');
+          $('.topnavbar').append('<p id="logout-text">'+$.cookie("login")+' , felicitari esti logat!</p>');
+          $(".login-form").hide();
+          $("#logout").on("click", function (){
+            $.removeCookie("login");
+            location.reload();
+          });
+        }
       }
       $("#login").val('');
       $("#password").val('');

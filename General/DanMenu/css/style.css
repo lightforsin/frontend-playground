@@ -5,16 +5,26 @@
   text-shadow: 1px 1px gray;
 }
 #logout{
-  width: 20%;
+  width: 10%;
   background-color: #5995f7;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
-  margin-left: 15px;
+  margin: 15px;
+  float: right;
+}
+#logout-text{
+  cursor: pointer;
+  font-size: 20px;
+  color: #56f442;
+  display: inline-block;
+  margin: 15px;
+  padding: 14px 20px;
+  font-style: italic;
+  float: right;
 }
 #logout:hover{
     background-color: #1b62d6;
@@ -109,6 +119,7 @@ input[type=button]:hover, [type=submit]:hover {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    margin:15px;
 }
 .topnavbar a:hover{
     background-color: white;
