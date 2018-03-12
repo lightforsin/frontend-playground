@@ -9,6 +9,17 @@ function myFunction() {
 }
 
 
+// $('.item').on('click', function() {
+//   alert("test");
+//   $('.login-form').css('display', 'block!important');
+// });
+// 
+// $(".item").click(function() {
+//   alert
+//   $('.login-form').css('display', 'block');
+// });
+
+
 // INCLUDE HEADER / FOOTER
 jQuery(document).ready(function($) {
   $(function(){

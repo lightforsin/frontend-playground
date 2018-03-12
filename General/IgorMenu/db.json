@@ -15,14 +15,6 @@
     {
       "title": "Contact",
       "link": "asdsad"
-    },
-    {
-      "title": "Log in",
-      "link": "login.html"
-    },
-    {
-      "title": "Sign up",
-      "link": "signup.html"
     }
   ],
   "sub-menu": [
@@ -109,6 +101,24 @@
       "Email": "admin@gmail.com",
       "Password": "123",
       "id": 11
+    },
+    {
+      "Username": "test",
+      "Email": "igori1@gmail.com",
+      "Password": "test123",
+      "id": 12
+    },
+    {
+      "Username": "test",
+      "Email": "test@gmai.com",
+      "Password": "test1234",
+      "id": 13
+    },
+    {
+      "Username": "teset",
+      "Email": "asdsad@sada.rt",
+      "Password": "123456",
+      "id": 14
     }
   ]
 }

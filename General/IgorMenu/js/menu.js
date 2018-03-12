@@ -18,7 +18,7 @@ $(document).ready(function() {
       cache : false,
       success : function(result) {
         for (var i = 0; i < result.length; i++) {
-          $('.item:nth-child(2) .sub-menu').append('<li class="item1"><a>'+ result[i].title +'</a></li>')
+          $('.item:nth-child(4) .sub-menu').append('<li class="item1"><a>'+ result[i].title +'</a></li>')
           $('#nav_menu .sub-menu').children('li:nth-child('+(i+1)+')').children('a').attr("href", result[i].link);
           }
         }
@@ -27,9 +27,9 @@ $(document).ready(function() {
 });
 
 $('#sign-up').on('click', function() {
-
+    alert("test");
     //Username validation
-    if ($('#username').val().length < 3 || $('#username').val().length > 15) {
+    if ($('#username').val().length < 1 || $('#username').val().length > 15) {
       $('#username').css('border', '1px solid red');
       return;
     } else {
@@ -68,18 +68,20 @@ $('#sign-up').on('click', function() {
     data: test,
     success: function() {
       // alert("Felicitari " + $('#username').val() + " esti inregistrat!");
+      window.location.href = "index.html";
     }
   });
 
 });
 
 $('#login').on('click', function() {
+  alert("test");
   $.ajax({
-    url: 'http://localhost:3000/user-data?Username=' + $('#username').val() + '&Password=' + $('#password').val() ,
+    url: 'http://localhost:3000/user-data?Username=' + $('#login_username').val() + '&Password=' + $('#login_password').val() ,
     type: 'GET',
     success: function(data) {
       if( data.length != 0) {
-        $(".test123").append("<p>Felicitari " + $('#username').val() + " esti logat!</p>");
+        $(".test123").append("<p>Felicitari " + $('#login_username').val() + " esti logat!</p>");
         $(".login-form").css('display', 'none');
       } else {
         alert("Nu exista asa User, mai incearca!");
