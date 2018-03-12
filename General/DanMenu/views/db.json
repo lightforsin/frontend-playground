@@ -24,16 +24,6 @@
       "id": 5,
       "name": "Contacts",
       "url": "contacts.html"
-    },
-    {
-      "id": 6,
-      "name": "Sign Up",
-      "url": "signup.html"
-    },
-    {
-      "id": 7,
-      "name": "Log In",
-      "url": "login.html"
     }
   ],
   "subposts": [
@@ -80,6 +70,12 @@
       "email": "Tolea@gmail.com",
       "password": "123",
       "id": 5
+    },
+    {
+      "Login": "Danutu",
+      "email": "1234@gmail.com",
+      "password": "123",
+      "id": 6
     }
   ]
 }
