@@ -41,9 +41,6 @@ body a {
 }
 #nav_menu .menu li {
   display: inline-block;
-  text-transform: uppercase;
-  color: #fff;
-  cursor: pointer;
 }
 
 #nav_menu .menu li a {
@@ -52,7 +49,7 @@ body a {
   font-size: 16px;
   text-transform: uppercase;
 }
-#nav_menu .menu li a:hover, #nav_menu .menu li:hover {
+#nav_menu .menu li a:hover {
   color: red;
 }
 
@@ -191,38 +188,6 @@ body a {
   color: #EF3B3A;
 }
 
-/* .item:hover .login-form {
-  display: block;
-} */
-
-.login-form {
-  position: absolute;
-  background-color: #b85252;
-  padding: 20px;
-  right: 10px;
-  /* display: none; */
-}
-
-.login-form input {
-  height: 30px;
-  border: 1px solid #f3f3f3;
-  border-radius: 2px;
-  width: 100%
-}
-.login-form button {
-  display: block;
-  Text-transform: uppercase;
-  outline: 0;
-  background: #4CAF50;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
 
 
 /* RESPONSIVE */
